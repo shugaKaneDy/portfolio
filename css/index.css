@@ -1,0 +1,46 @@
+body {
+  font-family: "Poppins";
+  padding-top: 80px; /* Adjust according to your navbar height */
+}
+
+section {
+  padding: 60px 0;
+}
+
+
+.medium-border {
+  height: 3px;
+  width: 75px;
+}
+
+.small-border {
+  height: 1px;
+  width: 75px;
+}
+
+.logos {
+  height: 50px;
+  width: 50px;
+}
+
+.card-link .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link .card:hover {
+  transform: scale(1.05); /* Slightly increase the card size */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow effect */
+}
+
+.custom-col-spacing {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 576px) { /* This targets small screens (up to 576px wide) */
+  .medium-border, .small-border {
+    width: 50px;
+  }
+}
+
+
