@@ -37,6 +37,16 @@ section {
   padding-right: 1rem;
 }
 
+.horline {
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.school-logo {
+  height: 50px;
+  width: 50px;
+}
+
 @media (max-width: 576px) { /* This targets small screens (up to 576px wide) */
   .medium-border, .small-border {
     width: 50px;
