@@ -47,6 +47,14 @@ section {
   width: 50px;
 }
 
+.bi-sun-fill {
+  text-shadow: 0 0 10px gold, 0 0 20px orange, 0 0 30px yellow;
+}
+
+.bi-moon-fill {
+  text-shadow: 0 0 10px lightblue, 0 0 20px cyan, 0 0 30px white;
+}
+
 @media (max-width: 576px) { /* This targets small screens (up to 576px wide) */
   .medium-border, .small-border {
     width: 50px;
