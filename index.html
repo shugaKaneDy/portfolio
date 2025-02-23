@@ -83,7 +83,7 @@
                 <span class="ms-2">View Projects</span>
               </a>
             </div>
-            <div class="d-flex gap-2 justify-content-center justify-content-md-start">
+            <div class="d-flex gap-2 justify-content-center justify-content-md-start socials">
               <a href="https://github.com/shugaKaneDy" target="_blank" class="btn btn-light"><bi class="bi-github h4"></bi></a>
               <a href="https://linkedin.com/in/kane-gerickson-tagay-620ab7349" target="_blank" class="btn btn-light"><bi class="bi-linkedin h4"></bi></a>
               <a href="https://www.instagram.com/shugakane.dey/" target="_blank" class="btn btn-light"><bi class="bi-instagram h4"></bi></a>
@@ -440,7 +440,7 @@
                 <p class="m-0"><span class="fw-bold text-primary">Email:</span> tagaykane18@gmail.com</p>
                 <p class="m-0"><span class="fw-bold text-primary">Address:</span> Imus, Cavite, Philippines</p>
               </div>
-              <div class="d-flex gap-2">
+              <div class="d-flex gap-2 socials">
                 <a href="https://github.com/shugaKaneDy" target="_blank" class="btn btn-light"><bi class="bi-github h4"></bi></a>
                 <a href="https://linkedin.com/in/kane-gerickson-tagay-620ab7349" target="_blank" class="btn btn-light"><bi class="bi-linkedin h4"></bi></a>
                 <a href="https://www.instagram.com/shugakane.dey/" target="_blank" class="btn btn-light"><bi class="bi-instagram h4"></bi></a>
@@ -478,36 +478,39 @@
   </script>
 
   <script>
-  $(document).ready(function() {
-    const body = $("body");
-    const sun = $(".bi-sun-fill");
-    const moon = $(".bi-moon-fill");
-    const darkTheme = $(".toggle-dark");
-    const mySide = $(".my-side");
+    $(document).ready(function() {
+      const body = $("body");
+      const sun = $(".bi-sun-fill");
+      const moon = $(".bi-moon-fill");
+      const darkTheme = $(".toggle-dark");
+      const mySide = $(".my-side");
+      const socials = $(".socials .btn"); // Select only social buttons
 
-    darkTheme.on("click", function() {
+      darkTheme.on("click", function() {
         const buttons = $(".btn-outline-dark, .btn-outline-light");
         const borders = $(".border-dark, .border-secondary");
 
-      if (moon.hasClass("d-none")) {
-        moon.removeClass("d-none");
-        sun.addClass("d-none");
-        body.attr("data-bs-theme", "dark");
-        mySide.attr("src", "assets/my-side-profile-dark.png");
+        if (moon.hasClass("d-none")) {
+          moon.removeClass("d-none");
+          sun.addClass("d-none");
+          body.attr("data-bs-theme", "dark");
+          mySide.attr("src", "assets/my-side-profile-dark.png");
 
-        buttons.removeClass("btn-outline-dark").addClass("btn-outline-light");
-        borders.removeClass("border-dark").addClass("border-secondary");
-      } else {
-        moon.addClass("d-none");
-        sun.removeClass("d-none");
-        body.removeAttr("data-bs-theme");
-        mySide.attr("src", "assets/my-side-profile.png");
+          buttons.removeClass("btn-outline-dark").addClass("btn-outline-light");
+          borders.removeClass("border-dark").addClass("border-secondary");
+          socials.removeClass("btn-light").addClass("btn-dark"); // Change social buttons
+        } else {
+          moon.addClass("d-none");
+          sun.removeClass("d-none");
+          body.removeAttr("data-bs-theme");
+          mySide.attr("src", "assets/my-side-profile.png");
 
-        buttons.removeClass("btn-outline-light").addClass("btn-outline-dark");
-        borders.removeClass("border-secondary").addClass("border-dark");
-      }
+          buttons.removeClass("btn-outline-light").addClass("btn-outline-dark");
+          borders.removeClass("border-secondary").addClass("border-dark");
+          socials.removeClass("btn-dark").addClass("btn-light"); // Revert social buttons
+        }
+      });
     });
-  });
 
   </script>
 </body>

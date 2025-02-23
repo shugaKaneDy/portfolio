@@ -2,6 +2,11 @@ body {
   font-family: "Poppins";
   padding-top: 60px; /* Adjust according to your navbar height */
 }
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure the body takes full width */
+  max-width: 100%; /* Ensure the body doesn't exceed the viewport width */
+}
 
 section {
   padding: 60px 0;
