@@ -48,12 +48,25 @@ section {
 }
 
 .bi-sun-fill {
-  text-shadow: 0 0 10px gold, 0 0 20px orange, 0 0 30px yellow;
+  text-shadow: 0 0 5px gold, 0 0 20px orange, 0 0 15px yellow;
+  transition: text-shadow 0.3s ease-in-out;
+}
+.bi-sun-fill:hover {
+  text-shadow: 0 0 10px gold, 0 0 10px orange, 0 0 30px yellow;
 }
 
 .bi-moon-fill {
-  text-shadow: 0 0 10px lightblue, 0 0 20px cyan, 0 0 30px white;
+  text-shadow: 0 0 5px lightblue, 0 0 20px cyan, 0 0 15px white;
+  transition: text-shadow 0.3s ease-in-out;
 }
+.bi-moon-fill:hover {
+  text-shadow: 0 0 10px lightblue, 0 0 10px cyan, 0 0 30px white;
+}
+
+.toggle-dark {
+  cursor: pointer;
+}
+
 
 @media (max-width: 576px) { /* This targets small screens (up to 576px wide) */
   .medium-border, .small-border {
